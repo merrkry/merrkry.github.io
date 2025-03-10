@@ -1,0 +1,60 @@
+baseURL: https://merrkry.github.io/
+languageCode: en-us
+title: Merrkry's Blog
+
+theme: ["PaperMod"]
+
+defaultContentLanguage: en
+defaultContentLanguageInSubdir: true
+
+languages:
+  en:
+    languageName: "English"
+    # contentDir: content/en
+    languageCode: en
+
+  zh:
+    languageName: "简体中文"
+    # contentDir: content/zh
+    languageCode: zh
+
+params:
+  description: "TODO"
+  # author: Merrkry
+  DateFormat: "2006-01-02"
+
+  profileMode:
+    enabled: false # needs to be explicitly set
+
+  homeInfoParams:
+    Title: "Merrkry"
+    Content: "A beginner at everything."
+  socialIcons:
+    - name: github
+      url: "https://github.com/merrkry"
+    - name: mastodon
+      url: "https://m.tsubasa.moe/@merrkry"
+    - name: matrix
+      url: "https://matrix.to/#/@merrkry:tsubasa.moe"
+    - name: telegram
+      url: "https://t.me/merrkry"
+
+  math: true
+
+markup:
+  # math compatibility
+  goldmark:
+    extensions:
+      passthrough:
+        delimiters:
+          block:
+            - - \[
+              - \]
+            - - $$
+              - $$
+          inline:
+            - - \(
+              - \)
+            - - $
+              - $
+        enable: true
